@@ -1,4 +1,3 @@
-import { getValue } from "./shared/utils";
 import {
   DOMString,
   PaintClassInterface,
@@ -10,17 +9,21 @@ import {
 export const createPaint = (
   name: DOMString,
   paintFunction: PaintFunction,
-  { inputProperties, inputArguments, contextOptions }: RegisterPaintArguments
+  {
+    inputProperties = [],
+    inputArguments = [],
+    contextOptions = { alpha: true }
+  }: RegisterPaintArguments = {}
 ) => {
   class PaintClass implements PaintClassInterface {
     static get inputProperties() {
-      return getValue(inputProperties, []);
+      return inputProperties;
     }
     static get inputArguments() {
-      return getValue(inputArguments, []);
+      return inputArguments;
     }
     static get contextOptions() {
-      return getValue(contextOptions, { alpha: true });
+      return contextOptions;
     }
     paint(ctx: any, size: any, styleMap: any) {
       paintFunction(ctx, size, styleMap);
