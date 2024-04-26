@@ -1,3 +1,4 @@
+"use strict";
 export type DOMString = string;
 
 export type PaintFunction = (ctx: any, geom: any, properties: any) => void;
