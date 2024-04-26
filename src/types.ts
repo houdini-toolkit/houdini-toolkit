@@ -1,4 +1,4 @@
-type DOMString = string;
+export type DOMString = string;
 
 export type PaintFunction = (ctx: any, geom: any, properties: any) => void;
 
@@ -11,8 +11,6 @@ export type contextOptionsType = {
 };
 
 export type RegisterPaintArguments = {
-  name: DOMString;
-  paintFunction: PaintFunction;
   inputProperties?: inputPropertiesType;
   inputArguments?: inputArgumentsType;
   contextOptions?: contextOptionsType;

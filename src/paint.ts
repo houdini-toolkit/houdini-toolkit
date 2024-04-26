@@ -1,17 +1,17 @@
 import { getValue } from "./shared/utils";
 import {
+  DOMString,
   PaintClassInterface,
+  PaintFunction,
   RegisterPaint,
   RegisterPaintArguments
 } from "./types";
 
-export const createPaint = ({
-  name,
-  paintFunction,
-  inputProperties,
-  inputArguments,
-  contextOptions
-}: RegisterPaintArguments) => {
+export const createPaint = (
+  name: DOMString,
+  paintFunction: PaintFunction,
+  { inputProperties, inputArguments, contextOptions }: RegisterPaintArguments
+) => {
   class PaintClass implements PaintClassInterface {
     static get inputProperties() {
       return getValue(inputProperties, []);
