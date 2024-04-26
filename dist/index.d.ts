@@ -1,2 +1,2 @@
-import { paint } from "../build/paint.js";
-export { paint };
+import { createPaint } from "../build/paint.js";
+export { createPaint };

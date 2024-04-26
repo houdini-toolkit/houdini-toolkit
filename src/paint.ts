@@ -5,7 +5,7 @@ import {
   RegisterPaintArguments
 } from "./types";
 
-export const paint = ({
+export const createPaint = ({
   name,
   paintFunction,
   inputProperties,
@@ -26,7 +26,6 @@ export const paint = ({
       paintFunction(ctx, size, styleMap);
     }
   }
-
   // @ts-ignore
   (registerPaint as RegisterPaint)(name, PaintClass);
 };
