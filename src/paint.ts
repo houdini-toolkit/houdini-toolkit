@@ -29,6 +29,6 @@ export const createPaint = (
       paintFunction(ctx, size, styleMap);
     }
   }
-  // @ts-ignore
+  // @ts-expect-error registerPaint not found
   (registerPaint as RegisterPaint)(name, PaintClass);
 };
