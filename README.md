@@ -1,4 +1,4 @@
-<h1 align="center">houdini-toolkit - convenient set of useful tools for working with the CSS Houdini APIs.</h1>
+<h1 align="center">houdini-toolkit - convenient set of useful tools for working with the CSS Houdini APIs</h1>
 
 <div align="center">
 
