@@ -1,7 +1,7 @@
 {
   "name": "houdini-toolkit",
-  "version": "1.0.0-beta.0",
-  "description": "Toolkit for Houdini api (Cascading Style Sheets)",
+  "version": "1.0.0-beta.1",
+  "description": "Convenient set of useful tools for working with the CSS Houdini APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -23,7 +23,7 @@
     "houdini css",
     "css",
     "toolkit",
-    "houdini api"
+    "houdini apis"
   ],
   "author": "Anton Maklakov",
   "license": "MIT",
