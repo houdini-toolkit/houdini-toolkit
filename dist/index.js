@@ -1,3 +1,3 @@
 "use strict";
-import { createPaint } from "../src/paint.js";
+import { createPaint } from "../build/paint.js";
 export { createPaint };
