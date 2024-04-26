@@ -209,7 +209,7 @@ createPaint("checkerboard", (ctx, geom, properties) => {
 
 ## Inspiration
 
-If you like the framework, it will be very cool if you rate the repository with a star ★
+If you like the toolkit, it will be very cool if you rate the repository with a star ★
 
 <div id="license"></div>
 
