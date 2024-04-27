@@ -7,6 +7,9 @@
 [![license](https://img.shields.io/badge/MIT-0183ff?style=for-the-badge&label=license&logoColor=FFF&labelColor=555555)](https://github.com/houdini-toolkit/houdini-toolkit/blob/main/LICENSE)
 
 </div>
+
+<div align="center"><a href="https://github.com/houdini-toolkit/examples/tree/main/paint">Paint API examples</a> • <a href="https://github.com/houdini-toolkit/examples">Examples</a></div>
+<br/>
 <div align="center"><b>Beta version</b></div>
 
 ## About
@@ -15,6 +18,37 @@ An actively developed set of tools for working with the CSS Houdini APIs, simpli
 
 ## Example
 A small example of the module in action (It is worth considering that this example uses import. In order for the code to work, needs to rebuild the file. JavaScript module builders are suitable for this):
+
+### TypeScript
+```typescript
+/* checkboardWorklet.ts */
+import {
+  DOMString,
+  PaintFunction,
+  PaintGeometry,
+  createPaint
+} from "houdini-toolkit";
+
+const paintName: DOMString = "checkerboard";
+const paintFunction: PaintFunction = (
+  ctx: CanvasRenderingContext2D,
+  geom: PaintGeometry,
+  properties: StylePropertyMapReadOnly
+) => {
+  const colors = ["red", "green", "blue"];
+  const size = 32;
+  for (let y = 0; y < geom.height / size; y++) {
+    for (let x = 0; x < geom.width / size; x++) {
+      const color = colors[(x + y) % colors.length];
+      ctx.beginPath();
+      ctx.fillStyle = color;
+      ctx.rect(x * size, y * size, size, size);
+      ctx.fill();
+    }
+  }
+};
+createPaint(paintName, paintFunction);
+```
 
 ### Javascript
 ```javascript
@@ -203,6 +237,46 @@ createPaint("checkerboard", (ctx, geom, properties) => {
     inputArguments: ['<color>'],
     contextOptions: { alpha: true }
 });
+```
+
+```typescript
+import {
+  DOMString,
+  PaintFunction,
+  PaintGeometry,
+  ContextOptions,
+  InputArguments,
+  InputProperties,
+  createPaint
+} from "houdini-toolkit";
+
+const paintName: DOMString = "checkerboard";
+const inputProperties: InputProperties = ["--foo"];
+const inputArguments: InputArguments = ["<color>"];
+const contextOptions: ContextOptions = { alpha: true };
+const paintOptions: PaintOptions = {
+  inputProperties,
+  inputArguments,
+  contextOptions
+};
+const paintFunction: PaintFunction = (
+  ctx: CanvasRenderingContext2D,
+  geom: PaintGeometry,
+  properties: StylePropertyMapReadOnly
+) => {
+  const colors = ["red", "green", "blue"];
+  const size = 32;
+  for (let y = 0; y < geom.height / size; y++) {
+    for (let x = 0; x < geom.width / size; x++) {
+      const color = colors[(x + y) % colors.length];
+      ctx.beginPath();
+      ctx.fillStyle = color;
+      ctx.rect(x * size, y * size, size, size);
+      ctx.fill();
+    }
+  }
+};
+createPaint(paintName, paintFunction, paintOptions);
 ```
 
 <div id="inspiration"></div>
