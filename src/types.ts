@@ -1,27 +1,40 @@
 "use strict";
 export type DOMString = string;
 
-export type PaintFunction = (ctx: any, geom: any, properties: any) => void;
+export interface PaintGeometry {
+  width: number;
+  height: number;
+}
 
-export type inputPropertiesType = string[];
+export type PaintFunction = (
+  ctx: CanvasRenderingContext2D,
+  geom: PaintGeometry,
+  properties: StylePropertyMapReadOnly
+) => void;
 
-export type inputArgumentsType = string[];
+export type InputProperties = string[];
 
-export type contextOptionsType = {
+export type InputArguments = string[];
+
+export interface ContextOptions {
   alpha: boolean;
-};
+}
 
 export type RegisterPaintArguments = {
-  inputProperties?: inputPropertiesType;
-  inputArguments?: inputArgumentsType;
-  contextOptions?: contextOptionsType;
+  inputProperties?: InputProperties;
+  inputArguments?: InputArguments;
+  contextOptions?: ContextOptions;
 };
 
 export declare class PaintClassInterface {
-  static get inputProperties(): inputPropertiesType;
-  static get inputArguments(): inputArgumentsType;
-  static get contextOptions(): contextOptionsType;
-  paint(ctx: any, geom: any, properties: any): void;
+  static get inputProperties(): InputProperties;
+  static get inputArguments(): InputArguments;
+  static get contextOptions(): ContextOptions;
+  paint(
+    ctx: CanvasRenderingContext2D,
+    geom: PaintGeometry,
+    properties: StylePropertyMapReadOnly
+  ): void;
 }
 
 export type RegisterPaint = (

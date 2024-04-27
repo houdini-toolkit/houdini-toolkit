@@ -1,2 +1,18 @@
 import { createPaint } from "../build/paint";
-export { createPaint };
+import {
+  InputProperties,
+  InputArguments,
+  ContextOptions,
+  PaintGeometry,
+  PaintFunction,
+  DOMString
+} from "../build/types";
+export {
+  createPaint,
+  InputProperties,
+  InputArguments,
+  ContextOptions,
+  PaintGeometry,
+  PaintFunction,
+  DOMString
+};

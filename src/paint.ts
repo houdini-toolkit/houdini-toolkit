@@ -3,6 +3,7 @@ import {
   DOMString,
   PaintClassInterface,
   PaintFunction,
+  PaintGeometry,
   RegisterPaint,
   RegisterPaintArguments
 } from "./types";
@@ -26,8 +27,12 @@ export const createPaint = (
     static get contextOptions() {
       return contextOptions;
     }
-    paint(ctx: any, size: any, styleMap: any) {
-      paintFunction(ctx, size, styleMap);
+    paint(
+      ctx: CanvasRenderingContext2D,
+      geom: PaintGeometry,
+      properties: StylePropertyMapReadOnly
+    ) {
+      paintFunction(ctx, geom, properties);
     }
   }
   // @ts-expect-error registerPaint not found
