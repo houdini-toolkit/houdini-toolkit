@@ -5,7 +5,7 @@ import {
   PaintFunction,
   PaintGeometry,
   RegisterPaint,
-  RegisterPaintArguments
+  PaintOptions
 } from "./types";
 
 export const createPaint = (
@@ -15,7 +15,7 @@ export const createPaint = (
     inputProperties = [],
     inputArguments = [],
     contextOptions = { alpha: true }
-  }: RegisterPaintArguments = {}
+  }: PaintOptions = {}
 ) => {
   class PaintClass implements PaintClassInterface {
     static get inputProperties() {

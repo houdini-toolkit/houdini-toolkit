@@ -20,7 +20,7 @@ export interface ContextOptions {
   alpha: boolean;
 }
 
-export type RegisterPaintArguments = {
+export type PaintOptions = {
   inputProperties?: InputProperties;
   inputArguments?: InputArguments;
   contextOptions?: ContextOptions;

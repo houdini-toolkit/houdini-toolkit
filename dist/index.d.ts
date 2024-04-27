@@ -5,7 +5,8 @@ import {
   ContextOptions,
   PaintGeometry,
   PaintFunction,
-  DOMString
+  DOMString,
+  PaintOptions
 } from "../build/types";
 export {
   createPaint,
@@ -14,5 +15,6 @@ export {
   ContextOptions,
   PaintGeometry,
   PaintFunction,
-  DOMString
+  DOMString,
+  PaintOptions
 };
