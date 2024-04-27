@@ -1,6 +1,6 @@
 {
   "name": "houdini-toolkit",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Convenient set of useful tools for working with the CSS Houdini APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -23,7 +23,8 @@
     "houdini css",
     "css",
     "toolkit",
-    "houdini apis"
+    "houdini apis",
+    "paint"
   ],
   "author": "Anton Maklakov",
   "license": "MIT",
