@@ -8,8 +8,10 @@ import {
   DOMString,
   PaintOptions
 } from "../build/types";
-export {
-  createPaint,
+
+export { createPaint };
+
+export type {
   InputProperties,
   InputArguments,
   ContextOptions,
