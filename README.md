@@ -9,8 +9,6 @@
 </div>
 
 <div align="center"><a href="https://github.com/houdini-toolkit/examples/tree/main/paint">Paint API examples</a> • <a href="https://github.com/houdini-toolkit/examples">Examples</a></div>
-<br/>
-<div align="center"><b>Beta version</b></div>
 
 ## About
 
