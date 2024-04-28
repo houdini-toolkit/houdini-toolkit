@@ -217,6 +217,7 @@ All values must conform to the types described [on this site](https://drafts.css
 
 #### Example:
 
+##### JavaScript
 ```javascript
 import { createPaint } from "houdini-toolkit";
 
@@ -238,6 +239,8 @@ createPaint("checkerboard", (ctx, geom, properties) => {
     contextOptions: { alpha: true }
 });
 ```
+
+##### TypeScript
 
 ```typescript
 import {
