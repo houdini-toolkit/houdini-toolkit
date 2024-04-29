@@ -1,3 +1,5 @@
 "use strict";
 import { createPaint } from "../build/paint";
-export { createPaint };
+import { isPaintSupported } from "../build/variables";
+
+export { createPaint, isPaintSupported };

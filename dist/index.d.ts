@@ -1,4 +1,5 @@
 import { createPaint } from "../build/paint";
+import { isPaintSupported } from "../build/variables";
 import {
   InputProperties,
   InputArguments,
@@ -9,7 +10,7 @@ import {
   PaintOptions
 } from "../build/types";
 
-export { createPaint };
+export { createPaint, isPaintSupported };
 
 export type {
   InputProperties,

@@ -8,6 +8,9 @@ import {
   PaintOptions
 } from "./types";
 
+/**
+ *  The createPaint() function registers a class to programmatically generate an image where a CSS property expects a file.
+ */
 export const createPaint = (
   name: DOMString,
   paintFunction: PaintFunction,
