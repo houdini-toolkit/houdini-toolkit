@@ -41,5 +41,3 @@ export const createPaint = (
   // @ts-expect-error registerPaint not found
   (registerPaint as RegisterPaint)(name, PaintClass);
 };
-
-export const isPaintSupported = "paintWorklet" in CSS;

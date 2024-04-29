@@ -1,3 +1,4 @@
+"use strict";
 /**
  *  Checks if the Paint API is supported
  */
