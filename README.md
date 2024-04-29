@@ -92,6 +92,7 @@ The example is based on the code from [this section](https://developer.mozilla.o
 2. <a href="#compability">Compability</a>
 3. <a href="#documentation">Documentation:</a>
     - <a href="#createPaint">createPaint</a>
+    - <a href="#isPaintSupported">isPaintSupported</a>
 4. <a href="#inspiration">Inspiration</a>
 5. <a href="#license">License</a>
 
@@ -279,6 +280,22 @@ const paintFunction: PaintFunction = (
   }
 };
 createPaint(paintName, paintFunction, paintOptions);
+```
+
+<div id="isPaintSupported"></div>
+
+### isPaintSupported
+
+`isPaintSupported` checks if the Paint API is supported. Let's say the Safari Paint API is not supported in the browser, so the value will be `false`.
+
+#### Example
+
+```javascript
+import { isPaintSupported } from "houdini-toolkit";
+
+if (isPaintSupported) {
+  CSS.paintWorklet.addModule("checkboardWorklet.js");
+}
 ```
 
 <div id="inspiration"></div>
