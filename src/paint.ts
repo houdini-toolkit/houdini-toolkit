@@ -39,5 +39,4 @@ export const createPaint = (
   (registerPaint as RegisterPaint)(name, PaintClass);
 };
 
-// @ts-expect-error paintWorklet not found
-export const isPaintSupported = window?.CSS?.paintWorklet !== undefined;
+export const isPaintSupported = "paintWorklet" in CSS;
