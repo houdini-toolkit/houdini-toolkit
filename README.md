@@ -248,6 +248,7 @@ import {
   ContextOptions,
   InputArguments,
   InputProperties,
+  PaintOptions,
   createPaint
 } from "houdini-toolkit";
 
