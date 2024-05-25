@@ -12,7 +12,7 @@
 
 ## About
 
-An actively developed set of tools for working with the CSS Houdini APIs, simplifying the coding process. All tools are based on the [documentation on this topic](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Houdini).
+Set of tools for working with the CSS Houdini APIs, simplifying the coding process. All tools are based on the [documentation on this topic](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Houdini).
 
 ## Example
 A small example of the module in action (It is worth considering that this example uses import. In order for the code to work, needs to rebuild the file. JavaScript module builders are suitable for this):
